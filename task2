@@ -17,5 +17,10 @@ def main():
     print(f"{num1} + {num2} = {num1 + num2}")
     print(f"{num1} - {num2} = {num1 - num2}")
     print(f"{num1} × {num2} = {num1 * num2}")
-  
-  
+      # 0での割り算対策
+    if num2 != 0:
+        print(f"{num1} ÷ {num2} = {num1 / num2:.2f}")
+    else:
+        print(f"{num1} ÷ {num2} = エラー (0で割ることはできません)")
+
+   
