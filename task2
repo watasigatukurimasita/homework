@@ -23,4 +23,25 @@ def main():
     else:
         print(f"{num1} ÷ {num2} = エラー (0で割ることはできません)")
 
+    print("\n==============================")
+    print(" ✨ 追加機能 )")
+    print("==============================")
    
+    if num1 > 0 and num2 > 0:
+        gcd = math.gcd(num1, num2)
+        lcm = (num1 * num2) // gcd
+        print(f"① {num1} と {num2} の「最小公倍数」: {lcm}")
+    else:
+        print("① 最小公倍数: 正の整数のときのみ計算できます")
+
+    # 追加機能②: 2つの数字で四角形を描画する視覚的おまけ
+    print(f"② 入力された数字（縦 {num1} × 横 {num2}）の四角形を描画します:")
+    if 0 < num1 <= 20 and 0 < num2 <= 20: # 大きすぎると画面が崩れるため制限
+        for _ in range(num1):
+            print("■ " * num2)
+    else:
+        print("   (※数字が大きすぎる、または0以下のため描画をスキップしました。1〜20の間で試してね！)")
+
+if __name__ == "__main__":
+    main()
+  
